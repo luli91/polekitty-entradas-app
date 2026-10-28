@@ -1,37 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎟️ PoleKitty - Panel de Control y Entradas
 
-## Getting Started
+Sistema de gestión de entradas, control de pagos y acceso en puerta para la Muestra Anual **PoleKitty**.
 
-First, run the development server:
+## 🚀 Tecnologías Utilizadas
 
-```bash
+* **Framework:** [Next.js](https://nextjs.org/) (App Router)
+* **Estilos:** [Tailwind CSS](https://tailwindcss.com/)
+* **Base de datos / Tiempo Real:** [Supabase](https://supabase.com/)
+* **Iconos:** [Lucide React](https://lucide.dev/)
+
+---
+
+## ✨ Funcionalidades Principales
+
+* **Panel de Administrador (Protegido por contraseña):**
+  * Visualización de todos los espectadores registrados y las bailarinas a las que vienen a ver.
+  * **Gestión de Pagos:** Botones interactivos para alternar entre estados *Pendiente* y *Aprobado*.
+  * **Control de Puerta en Tiempo Real:** Marcar asistencia (*Presente* / *Ausente* / *Ingresado*).
+  * **Sincronización en vivo:** Actualización automática vía WebSockets de Supabase ante cualquier cambio de estado.
+
+* **Optimización para Impresión:**
+  * Listado limpio de asistentes con pagos aprobados.
+  * Ocultamiento automático de elementos de interfaz y pagos pendientes al mandar a imprimir.
+  * Casilleros físicos impresos `[ ] Presente` y `[ ] Ausente` para control manual en la entrada del teatro.
+
+* **Sección de Votación / Teatro:**
+  * Acceso al QR oficial para las mesas de votación en vivo de la app de performance.
+
+---
+
+## 📂 Estructura del Proyecto
+
+```text
+src/
+├── app/
+│   ├── admin/          # Panel de control de entradas y puerta
+│   ├── mi-entrada/     # Visualización de entrada de espectador
+│   └── page.tsx        # Página de registro y compra de entradas
+└── lib/
+    └── supabase.ts     # Configuración del cliente de Supabase
+⚙️ Configuración e Instalación Local
+Clonar el repositorio:
+
+Bash
+git clone [https://github.com/luli91/polekitty-entradas-app.git](https://github.com/luli91/polekitty-entradas-app.git)
+Instalar dependencias:
+
+Bash
+npm install
+Crear un archivo .env.local en la raíz con tus credenciales de Supabase:
+
+Fragmento de código
+NEXT_PUBLIC_SUPABASE_URL=tu_url_de_supabase
+NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_anon_key_de_supabase
+Ejecutar el servidor de desarrollo:
+
+Bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# polekitty-entradas-app
+Abrir http://localhost:3000 en tu navegador.
