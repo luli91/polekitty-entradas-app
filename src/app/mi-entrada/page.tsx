@@ -118,9 +118,9 @@ function ContenidoEntrada() {
               <p className="font-black uppercase tracking-wider border-b-2 border-white pb-1 mb-2 text-white">
                 Datos para la Transferencia:
               </p>
-              <p><span className="text-neutral-400">Titular:</span> Florencia (PoleKitty)</p>
-              <p><span className="text-neutral-400">Alias:</span> POLEKITTY.MUESTRA</p>
-              <p><span className="text-neutral-400">CBU:</span> 0000003100012345678900</p>
+              <p><span className="text-neutral-400">Titular:</span> Florencia Ayelen Medina Diaz</p>
+              <p><span className="text-neutral-400">Alias:</span> Muestrapole2026</p>
+              <p><span className="text-neutral-400">CUIL:</span> 27-39732748-0 </p>
             </div>
 
             <p className="text-[11px] font-bold text-neutral-400">
